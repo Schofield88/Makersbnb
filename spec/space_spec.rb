@@ -21,4 +21,9 @@ describe Space do
     expect(Me.eaten_tea?).to eq(true)
   end
 
+  it "did not make a pass at your mum lol" do
+    Me.is_perfect_gentleman
+    expect(your_mum.got_made_a_pass_at).to eq(false)
+  end
+
 end
