@@ -1,6 +1,9 @@
+ENV['ENVIRONMENT'] = 'test'
+
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'pg'
 require 'simplecov'
 require 'simplecov-console'
 require "./app.rb"
@@ -11,20 +14,10 @@ require_relative './setup_test_database'
 
 # Set the environment to "test"
 # ENV['RACK_ENV'] = 'test'
-ENV['ENVIRONMENT'] = 'test'
+
 
 # Bring in the contents of the `app.rb` file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
-
-# Require all the testing gems
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
-require 'simplecov'
-require 'simplecov-console'
-require 'setup_test_database.rb'
-require './app.rb'
-require './spec/features/features_helper.rb'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console

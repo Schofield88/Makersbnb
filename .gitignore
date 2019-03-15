@@ -1,2 +1,4 @@
 coverage/*.json
 makers_bnb.rb
+makers_bnb_test.rb
+makers_bnb_not_test.rb

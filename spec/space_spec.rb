@@ -15,4 +15,10 @@ describe Space do
     expect(Space[0][:available]).to eq(false)
   end
 
+  it "goes round your mum's house for tea" do
+    head_to_your_mums_house
+    Me.have_tea
+    expect(Me.eaten_tea?).to eq(true)
+  end
+
 end
